@@ -1,10 +1,16 @@
 import { Component } from '@angular/core';
 
+// Decorator 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-root', // selector 
+  templateUrl: './app.component.html',   //html 
+  styleUrls: ['./app.component.css'] // css 
 })
 export class AppComponent {
-  title = 'app';
+  
+
+
+  //PROP
+  personName = "Vijay";
+
 }

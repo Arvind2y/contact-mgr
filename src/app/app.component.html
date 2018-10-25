@@ -1,20 +1,65 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<!-- Layout -->
+<app-header></app-header>
 
+<div style="padding-top: 60px;">
+  <div class="container">
+    personName from Parent Component: {{personName}}
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="si-tab" data-toggle="tab" href="#si" role="tab" aria-controls="home"
+          aria-selected="true">String Interpolation</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="pb-tab" data-toggle="tab" href="#pb" role="tab" aria-controls="profile"
+          aria-selected="false">Property Binding</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="cpb-tab" data-toggle="tab" href="#cpb" role="tab" aria-controls="contact"
+          aria-selected="false">Custom Property Binding</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="eb-tab" data-toggle="tab" href="#eb" role="tab" aria-controls="contact"
+          aria-selected="false">Event Binding</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="ceb-tab" data-toggle="tab" href="#ceb" role="tab" aria-controls="contact"
+          aria-selected="false">Custom Event Binding</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="twb-tab" data-toggle="tab" href="#twb" role="tab" aria-controls="contact"
+          aria-selected="false">Two way Binding</a>
+      </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+
+      <!-- String Interpolcation Content-->
+      <div class="tab-pane fade show active" id="si" role="tabpanel">
+        <app-si></app-si>
+      </div>
+
+      <!-- Property Binding Tab Content-->
+      <div class="tab-pane fade" id="pb" role="tabpanel" >
+        <app-pb></app-pb>
+      </div>
+      <!-- Custom Propery Binding -->
+      <div class="tab-pane fade" id="cpb" role="tabpanel">
+        <app-cpb [myName]="personName"></app-cpb>   <!-- myName is a custom Property -- to make custom prop refer cpb.comp.ts -->
+      </div>
+
+      <!-- Event Binding -->
+      <div class="tab-pane fade" id="eb" role="tabpanel" >
+        <app-eb></app-eb>
+
+      </div>
+
+
+      <div class="tab-pane fade" id="ceb" role="tabpanel">
+        <h2>Custom Event Binding</h2>
+        
+      </div>
+      <div class="tab-pane fade" id="twb" role="tabpanel">...</div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

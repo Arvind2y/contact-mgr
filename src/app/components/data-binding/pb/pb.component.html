@@ -1,20 +1,30 @@
 <div class="card">
     <div class="card-header"><strong>Property Binding</strong></div>
-        
     <div class="card card-body">
-        <!-- String Interpolation-->
-        <p>{{ firstName }}</p>
 
         <!-- String Interpolation -->
-        <input type="text" value="{{firstName}}">
+        <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">{{ firstName }}</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" value="{{firstName}}">
+                <!-- <input type="email" class="form-control" id="inputEmail3" placeholder="Email"> -->
+            </div>
+        </div>
 
-        Property Binding:
-        <input type="text" [value]="firstName">
-
-        <button [disabled]="isDisabled" class="btn btn-primary">Login</button>
-
-        <div [ngClass]="{ redText: !isLoggedIn(), greenText: isLoggedIn() }">Testing a div with ngClass </div>
-
+        <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Property Binding:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" [value]="firstName" class="form-control">
+            </div>
+        </div>
+       
+        <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10">
+                <button [disabled]="isDisabled" class="btn btn-primary">Login</button>
+            </div>
+            <div [ngClass]="{ redText: !isLoggedIn(), greenText: isLoggedIn() }">Testing a div with ngClass </div>
+        </div>
         <!-- Exercise -->
         <!-- <div [ngStyle]="">Testing with ngStyle </div> -->
     </div>

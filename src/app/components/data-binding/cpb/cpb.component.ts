@@ -12,7 +12,12 @@ export class CpbComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
+    // person = "";
+    // person.slice(0);
+
   }
+  
 
   
 }
